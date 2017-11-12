@@ -1,5 +1,5 @@
 // Make a get request to our api route that will return every "review with a rating of 7 or more
-$.get("/api/rating/high", function(data) {
+$.get("/api/review/high", function(data) {
 
   // For each review that our server sends us back
   for (var i = 0; i < data.length; i++) {
@@ -15,7 +15,7 @@ $.get("/api/rating/high", function(data) {
     // Now  we add our review data to the well we just placed on the page
     $("#book-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].title + "</h2>");
     $("#book-well-" + i).append("<h4>Brewery: " + data[i].brew_name + "</h4>");
-    $("#book-well-" + i).append("<h4>Comment: " + data[i]. +comment "</h4>");
+    $("#book-well-" + i).append("<h4>Comment: " + data[i].comment + "</h4>");
     $("#book-well-" + i).append("<h4>Rating: " + data[i].rating + "</h4>");
   }
 });

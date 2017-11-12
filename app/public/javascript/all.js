@@ -13,9 +13,10 @@ $.get("/api/all", function(data) {
     $("#well-section").append(wellSection);
 
     // Now  we add our review data to the well we just placed on the page
-    $("#book-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].title + "</h2>");
-    $("#book-well-" + i).append("<h4>Brewery: " + data[i].brew_name + "</h4>");
-    $("#book-well-" + i).append("<h4>Comment: " + data[i].comment + "</h4>");
-    $("#book-well-" + i).append("<h4>Rating: " + data[i].rating + "</h4>");
+    $("#book-well-" + i).append("<h2>" + (i + 1) + ". "+ data[i].brew_name + "</h2>");
+    $("#book-well-" + i).append("<h4>Review Title: " + data[i].title + "</h4>");
+    //$("#book-well-" + i).append("<h4>Brewery: " + data[i].brew_name + "</h4>");
+    $("#book-well-" + i).append("<p>Comment: " + data[i].comment + "</p>");
+    $("#book-well-" + i).append("<p>Rating: " + data[i].rating + "</p>");
   }
 });

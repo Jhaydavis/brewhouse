@@ -2,7 +2,17 @@ var path = require('path');
 
 module.exports = function (app) {
 
-
+    app.get("/api/:brew_name", function(req, res) {
+        if (req.params.review) {
+          Review.findAll({
+            where: {
+              brew_name: req.params.review
+            }
+          }).then(function(results) {
+            res.json(results);
+          });
+        }
+      });
 
     app.get('/survey', function (req, res) {
         res.sendFile(path.join(__dirname + '/../public/survey.html'));

@@ -67,8 +67,9 @@ module.exports = function(app) {
   app.get("/api/brew_name/:brew_name", function(req, res) {
     if (req.params.brew_name) {
       Review.findAll({
+        //Found this on StackOverflow! the LIKE plus % allow me to do a broad match query
         where: {
-          brew_name: req.params.brew_name
+          brew_name: { like: '%' + req.params.brew_name + '%'}
         }
       }).then(function(results) {
         res.json(results);
@@ -77,7 +78,7 @@ module.exports = function(app) {
   });
 
   // Get all "high" ratings (ratings of 7 or more)
-  app.get("/api/rating/high", function(req, res) {
+  app.get("/api/review/high", function(req, res) {
     Review.findAll({
       where: {
         rating: {
@@ -90,19 +91,7 @@ module.exports = function(app) {
     });
   });
 
-  // Get all "low" ratings (rating of 6 or less)
-  app.get("/api/rating/low", function(req, res) {
-    Review.findAll({
-      where: {
-        ratings: {
-          $lte: 6
-        }
-      },
-      order: [["ratings", "ASC"]]
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
+ 
 
   // Add a review
   app.post("/api/new", function(req, res) {
@@ -120,7 +109,7 @@ module.exports = function(app) {
   app.post("/api/delete", function(req, res) {
     console.log("Review Data:");
     console.log(req.body);
-    Book.destroy({
+    Review.destroy({
       where: {
         id: req.body.id
       }

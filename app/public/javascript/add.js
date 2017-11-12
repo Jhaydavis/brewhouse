@@ -13,6 +13,7 @@ $("#add-btn").on("click", function(event) {
   };
 
   // Send an AJAX POST-request with jQuery
+  //debugger;
   $.post("/api/new", newReview)
     // On success, run the following code
     .done(function(data) {

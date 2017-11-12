@@ -45,12 +45,12 @@ function renderReviews(data) {
     for (var i = 0; i < data.length; i++) {
 
       var div = $("<div>");
-
-      div.append("<h2>" + data[i].title + "</h2>");
-      div.append("<p>Brewery: " + data[i].brew_name + "</p>");
+      div.append("<h3>" + data[i].brew_name + "</h3>");
+      div.append("<p>Review Title: " + data[i].title + "</p>");
+      //div.append("<p>Brewery: " + data[i].brew_name + "</p>");
       div.append("<p>Comment: " + data[i].comment + "</p>");
       div.append("<p>Rating: " + data[i].rating + "</p>");
-      div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE REVIEW</button>");
+     // div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE REVIEW</button>");
 
       $("#stats").append(div);
 

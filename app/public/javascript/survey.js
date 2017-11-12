@@ -1,11 +1,11 @@
 $(document).ready(function () {
     // Questions array
     var questions = [
-        'I prefer brewhouses with a traditional look feel.',
-        'I prefer brewhouses with a modern contemporary feel',
-        'I would perfer a larger selection over low prices.',
-        'I prefer having many small samples as opposed to few larger.',
-        'I know exactly what a snakebite is.'
+        'I like older more established brewhouses.',
+        'I love brewhouses with a modern contemporary feel.',
+        'My money is kinda funny - I need low price brews.',
+        'Many small samples are way better than a few pints.',
+        'I only drink with those that know what a snakebite is.'
     ];
 
     // Choices .
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         // Capture username and image link values.
         var userName = $('#userName').val();
-        var imageLink = $('#imageLink').val();
+       // var imageLink = $('#imageLink').val();
 
         // If both of those items were filled out, gather other answers and submit.
         if (userName.length > 0   
@@ -65,7 +65,6 @@ $(document).ready(function () {
 
             var surveyData = {
                 name: userName,
-                photo: imageLink,
                 answers: answers
             };
 
@@ -75,8 +74,8 @@ $(document).ready(function () {
 
                     // Empty out modal and username and link fields.
                     $('#modalContent').empty();
-                    $('#userName').val('');
-                    $('#imageLink').val('');
+                    //$('#userName').val('');
+                   // $('#imageLink').val('');
 
                     data.forEach(function (profile) {
                         var profileDiv = $('<div class="profile">');
@@ -94,7 +93,7 @@ $(document).ready(function () {
 
                         // Add these items to the modal.
                         $('#modalContent').append(profileDiv);
-                        $('#modalContent').append(profileDiv);
+                        //$('#modalContent').append(profileDiv);
                         $('#modalContent').append(location);
                        
                     });
