@@ -85,16 +85,32 @@ $(document).ready(function () {
                         var map = profile.map;
                         // Put the name in a header.
                         var nameHeader = $('<h3>').text(name);
+                        var brewLink = $('<h4>').html()
                         // Add a photo with an 'src' of the photoURL submitted.
                         //var myPhoto = $('<img>').attr('src', imageLink);
                         var photo = $('<img>').attr('src', photoURL);
                         //profileDiv.append(myPhoto, nameHeader,  photo);
                         profileDiv.append(nameHeader, photo);
 
+
+                        // ******  Begin Google Map API   ******
+                            
+                        
+                          
+
+
+                        //******     End Google Map  API  ******
+
+
+
+
+
                         // Add these items to the modal.
                         $('#modalContent').append(profileDiv);
                         //$('#modalContent').append(profileDiv);
                         $('#modalContent').append(location);
+
+                        // See if I can append the
                        
                     });
 
