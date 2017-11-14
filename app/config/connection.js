@@ -7,12 +7,15 @@ var connection;
 if (process.env.JAWSDB_URL) {
 	connection = Sequelize.createConnection(process.env.JAWSDB_URL);
 } else {
-	connection = Sequelize.createConnection({
-		host: 'localhost',
-		user: 'root',
-		password: '',
-		database: 'hoppy_reviews'
-	});
+	connection = new Sequelize("hoppy_reviews", "root", "", {
+		host: "localhost",
+		dialect: "mysql",
+		pool: {
+		  max: 5,
+		  min: 0,
+		  idle: 10000
+		}
+	  });
 };
 
 
