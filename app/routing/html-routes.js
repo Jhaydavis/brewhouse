@@ -28,6 +28,11 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname + '/../public/home.html'));
     });
 
+    //age authenticated page for users navigating within the app
+    app.get("/auth", function (req, res) {
+        res.sendFile(path.join(__dirname + '/../public/home-auth.html'));
+    });
+
 
     app.get("/view", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/view.html"));
