@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Brew Map</title>
-</head>
-<body>
-   <p>Brew Map</p>
-    
-</body>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Dallas Brewery Map</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 32.7767, lng: -96.7970};
+        var deepEllum ={lat: 32.7808  ,lng: -96.7817 };
+        var brainDead ={lat: 32.783831  ,lng: -96.785397 };
+        var loneStar ={lat: 32.7808  ,lng: -96.7817 };
+        var bishopCider ={lat: 32.7808  ,lng: -96.7817 };
+        var onRotation ={lat: 32.7808  ,lng: -96.7817 };
+        var texasAle ={lat: 32.7808  ,lng: -96.7817 };
+        var fourCorners ={lat: 32.7808  ,lng: -96.7817 };
+        var oakHighlands ={lat: 32.890145  ,lng: -96.704578 };
+        var nobelRay ={lat: 32.803069  ,lng: -96.841472 };
+        var peticolasBrew ={lat: 32.796620  ,lng: -96.829129 };
+        var communityBeer ={lat: 32.791431  ,lng: -96.816057 };
+        
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+       // var marker = new google.maps.Marker({
+        //  position: uluru,
+        //  map: map,
+        //  title: 'Dallas TX'
+       // });
+
+        var marker = new google.maps.Marker({
+          position: brainDead,
+          map: map,
+          title: 'Braindead Brewing'
+        });
+
+        var marker = new google.maps.Marker({
+          position: communityBeer,
+          map: map,
+          title: 'Community Beer Co'
+        });
+
+        var marker = new google.maps.Marker({
+          position: nobelRay,
+          map: map,
+          title: 'Nobel Ray Brewing'
+        });
+
+        var marker = new google.maps.Marker({
+          position: oakHighlands,
+          map: map,
+          animation: google.maps.Animation.DROP,
+
+          title: 'Oak Highlands Brewing'
+        });
+
+        
+
+        var marker = new google.maps.Marker({
+          position: deepEllum,
+          map: map,
+          title: 'Deep Ellum'
+        });
+
+        marker.addListener('click', toggleBounce);
+
+        function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgK8PazldG5ojgISPXl-yhfkMhJAH22U4&callback=initMap">
+    </script>
+  </body>
 </html>

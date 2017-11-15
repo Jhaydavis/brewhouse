@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hoppy Hour Brewery Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 500px;
+        width: 650px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+     
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 32.776664, lng: -96.796988},
+          zoom: 10
+        });
+        infoWindow = new google.maps.InfoWindow;
+        var communityBeer ={lat: 32.791431  ,lng: -96.816057 };
+        var deepEllum ={lat: 32.7808  ,lng: -96.7817 };
+        var brainDead ={lat: 32.783831  ,lng: -96.785397 };
+        var loneStar ={lat: 33.063119  ,lng: -96.886347 };
+        var bishopCider ={lat: 32.749263  ,lng: -96.831672 };
+        var onRotation ={lat: 32.810956  ,lng: -96.731360 };
+        var texasAle ={lat: 32.786053  ,lng: -96.818311 };
+        var fourCorners ={lat: 32.772085  ,lng: -96.791787 };
+        var oakHighlands ={lat: 32.890145  ,lng: -96.704578 };
+        var nobelRay ={lat: 32.803069  ,lng: -96.841472 };
+        var peticolasBrew ={lat: 32.796620  ,lng: -96.829129 };
+
+        var marker = new google.maps.Marker({
+          position: communityBeer,
+          map: map,
+          title: 'Community Beer Co'
+        });
+
+        var marker = new google.maps.Marker({
+          position: deepEllum,
+          map: map,
+          title: 'Deep Ellum Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: brainDead,
+          map: map,
+          title: 'Braindead Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: loneStar,
+          map: map,
+          title: 'Lonestar Tap & Caps Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: bishopCider,
+          map: map,
+          title: 'Bishop Cider Co'
+        });
+
+        var marker = new google.maps.Marker({
+          position: onRotation,
+          map: map,
+          title: 'On Rotation Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: texasAle,
+          map: map,
+          title: 'Texas Ale Project'
+        });
+
+        var marker = new google.maps.Marker({
+          position: fourCorners,
+          map: map,
+          title: 'Four Corners Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: oakHighlands,
+          map: map,
+          title: 'Oak Highlands Brewery'
+        });
+
+        var marker = new google.maps.Marker({
+          position: nobelRay,
+          map: map,
+          title: 'Nobel Ray Brewing Co'
+        });
+
+        var marker = new google.maps.Marker({
+          position: peticolasBrew,
+          map: map,
+          title: 'Peticolas Brewing Co'
+        });
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are HERE.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgK8PazldG5ojgISPXl-yhfkMhJAH22U4&callback=initMap">
+    </script>
+  </body>
+</html>
+

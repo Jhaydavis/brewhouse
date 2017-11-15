@@ -1,6 +1,7 @@
 module.exports = [{
         "name": "Lone Star Taps & Caps",
         "location": " 2823 St Louis St, Dallas, TX 75226",
+        "map":"https://www.google.com/maps/dir/''/Lone+Star+Taps+%26+Caps,+4740+TX-121+%23500,+Lewisville,+TX+75056/@33.0630995,-96.9563867,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864c252dd5fdf6bb:0x87f9abee73f498df!2m2!1d-96.8863465!2d33.0631191",
         "photo": "http://www.star-telegram.com/living/food-drink/4h3hzb/picture115133063/alternates/FREE_640/taps1",
         "answers": ["4", "2", "3", "2", "3"]
     },
@@ -8,6 +9,7 @@ module.exports = [{
     {
         "name": "Bishop Cider Company",
         "location": "509 N Bishop Ave Dallas, Texas 75208",
+        "map":"https://www.google.com/maps/dir/''/bishop+cider+co+dallas/@32.7492433,-96.898671,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864e9985ca4b142d:0x25827eec7983ffe7!2m2!1d-96.8286308!2d32.7492628",
         "photo": "http://www.wfaa.com/img/resize/content.wfaa.com/photo/2016/08/25/0825%20BRAINDEAD%20BREWING_1472178960667_5838162_ver1.0.jpg?preset=video-still",
         "answers": ["4", "2", "2", "4", "5"]
     },
@@ -15,6 +17,7 @@ module.exports = [{
     {
         "name": "On Rotation",
         "location": "7328 Gaston Ave  Dallas, Texas 75214",
+        "map": "https://www.google.com/maps/dir/''/on+rotation+dallas/@32.8109365,-96.8014002,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864ea1f44d5be86d:0x4396c10f68be02ec!2m2!1d-96.73136!2d32.810956",
         "photo": "https://lh3.ggpht.com/p/AF1QipPgBcYwpeCdp4ugUtAJP_4IwLetkdXwfV_8aCc=w512-h384-n",
         "answers": ["3", "3", "5", "4", "3"]
     },
@@ -22,7 +25,9 @@ module.exports = [{
     {
         "name": "Texas Ale Project",
         "location": "2032 Executive Dr.  Dallas, Texas 75041",
-        "photo": "https://media.licdn.com/media/AAEAAQAAAAAAAAOEAAAAJDBkZmRjZjEzLTg2ODMtNDAzYy1hMGU5LWM4OWM1MTI4MmYxZA.png",
+        "map":"https://www.google.com/maps/dir/''/texas+ale+project+dallas/data=!4m5!4m4!1m0!1m2!1m1!1s0x864e99414ea55643:0x4c0c07c5adde21fc?sa=X&ved=0ahUKEwjA6cfV1L_XAhWEMSYKHQi9DEAQ9RcImwEwDw",
+        "photo": 
+        "https://media.licdn.com/media/AAEAAQAAAAAAAAOEAAAAJDBkZmRjZjEzLTg2ODMtNDAzYy1hMGU5LWM4OWM1MTI4MmYxZA.png",
         "answers": ["4", "2", "4", "4", "4"]
     },
 
@@ -30,7 +35,7 @@ module.exports = [{
     {
         "name": "Deep Ellum",
         "location": "2823 St Louis St, Dallas, TX 75226",
-        "map": "https://www.google.com/",
+        "map": "https://www.google.com/maps/dir/''/deep+ellum+brewery+dallas/data=!4m5!4m4!1m0!1m2!1m1!1s0x864e98e87786baa1:0x75eec0a87d4dea37?sa=X&ved=0ahUKEwiMotzu1L_XAhVJJiYKHbUhDaMQ9RcIiwEwDg",
         "photo": "https://static.urbandaddy.com/uploads/assets/image/articles/standard/47f8bdcb4ab269922cb8ae0394f338ddeddb8f58.jpg",
         "answers": ["3", "3", "5", "3", "5"]
     },
@@ -68,6 +73,7 @@ module.exports = [{
     {
         "name": "Braindead Brewing",
         "location": "2625 Main St  Dallas, Texas 75226",
+        "map":"https://www.google.com/maps/dir/''/braindead+brewing/@32.7838117,-96.8554376,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864e98dd948c6c57:0x7abe5c5f1577dcbe!2m2!1d-96.7853974!2d32.7838312",
         "photo": "https://lh3.ggpht.com/p/AF1QipPnto0Wy1zNRjI0SEjLMlp_A7LcFoSWlqAFgcYZ=w682-h384-n",
         "answers": ["3", "3", "4", "4", "3"]
     },

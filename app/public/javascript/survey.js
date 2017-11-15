@@ -89,8 +89,9 @@ $(document).ready(function () {
                         // Add a photo with an 'src' of the photoURL submitted.
                         //var myPhoto = $('<img>').attr('src', imageLink);
                         var photo = $('<img>').attr('src', photoURL);
+                        var mapDirections = $('modalMap').html(map);
                         //profileDiv.append(myPhoto, nameHeader,  photo);
-                        profileDiv.append(nameHeader, photo);
+                        profileDiv.append(nameHeader, photo, mapDirections);
 
 
                         // ******  Begin Google Map API   ******
