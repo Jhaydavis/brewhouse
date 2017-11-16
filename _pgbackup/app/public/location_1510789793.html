@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hoppy Hour Brewery Map</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8">
-        <style>/* Always set the map height explicitly to define the size of the div
+  <head>
+    <title>Hoppy Hour Brewery Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 500px;
         width: 650px;
       }
-      /* Optional: Makes the sample page fill the window. */</style>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body style="background-color: #a0bbd1">
-        <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.11);padding-left: 52px"> 
-            <h1>Hoppy Hour Brew Review</h1> 
-            <h3>Reviews of Dallas Brewhouses</h3> 
-            <hr> 
-            <!--<a href="/" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-eye-open"></span> Search Reviews</a>-->             
-            <a href="/view" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Reviews</a> 
-            <a href="/add" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Review</a> 
-            <a href="/all" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Reviews</a> 
-            <a href="/high" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th-list"></span> Best Rated</a> 
-            <a href="/auth" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Home</a> 
-        </div>
-        <div id="map" style="margin-left: 10%"></div>
-        <script>
+      /* Optional: Makes the sample page fill the window. */
+     
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -36,7 +26,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 32.776664, lng: -96.796988},
-          zoom: 12
+          zoom: 10
         });
         infoWindow = new google.maps.InfoWindow;
         var communityBeer ={lat: 32.791431  ,lng: -96.816057 };
@@ -146,9 +136,9 @@
         infoWindow.open(map);
       }
     </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgK8PazldG5ojgISPXl-yhfkMhJAH22U4&callback=initMap">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgK8PazldG5ojgISPXl-yhfkMhJAH22U4&callback=initMap">
     </script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+  </body>
 </html>
+

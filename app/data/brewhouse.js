@@ -43,6 +43,7 @@ module.exports = [{
     {
         "name": "Four Corners Brewing Company",
         "location": "1311 S Ervay St.  Dallas, Texas 75215",
+        "map":"https://www.google.com/maps/dir/''/four+corners+brewery/data=!4m5!4m4!1m0!1m2!1m1!1s0x864e9960bb9a7dcf:0x76fad647537bef3?sa=X&ved=0ahUKEwip-8b77cHXAhWJj1QKHWJ2DskQ9RcIngEwEA",
         "photo": "https://media-cdn.tripadvisor.com/media/photo-s/06/b9/ce/5b/four-corners-brewing.jpg",
         "answers": ["3", "3", "2", "2", "3"]
     },
@@ -51,6 +52,7 @@ module.exports = [{
 
         "name": "Oak Highlands Brewery",
         "location": "10484 Brockwood Rd  Dallas, Texas 75238",
+        "map":"https://www.google.com/maps/dir/''/oak+highlands+brewery/data=!4m5!4m4!1m0!1m2!1m1!1s0x864ea087b00af77d:0xc5385aacf9fe7d7a?sa=X&ved=0ahUKEwjO86ur7sHXAhUCjVQKHaHlCswQ9RcIiAEwDQ",
         "photo": "https://images1.dallasobserver.com/imager/u/745xauto/8500265/ohb_3.jpg",
         "answers": ["5", "1", "2", "4", "3"]
     },
@@ -59,6 +61,7 @@ module.exports = [{
     {
         "name": "Nobel Ray Brewing Co",
         "location": "2636 Farrington St. Dallas, Texas 75207",
+        "map":"https://www.google.com/maps/dir/''/noble+rey+brewery/@32.8030494,-96.9115125,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864e9c0743c51e11:0x40c0efe0b22b5de7!2m2!1d-96.8414723!2d32.8030689",
         "photo": "https://www.wanderu.com/blog/wp-content/uploads/2016/10/noble-rey-interior-680.jpg",
         "answers": ["4", "2", "5", "4", "3"]
     },
@@ -66,6 +69,7 @@ module.exports = [{
     {
         "name": "Peticolas Brewing",
         "location": "2026 Farrington St Dallas, Texas 75207",
+        "map":"https://www.google.com/maps/dir/''/peticolas+brewery/@32.7966008,-96.8991693,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x864e995142ec01d3:0xc5c46b5fa19783e2!2m2!1d-96.8291291!2d32.7966203",
         "photo": "http://www.velvethammer5k.com/images/w5.jpg",
         "answers": ["2", "4", "3", "4", "2"]
     },
@@ -82,6 +86,7 @@ module.exports = [{
     {
         "name": "Community Beer Company",
         "location": "1530 Inspiration Dr.  Dallas, Texas 75207",
+        "map":"https://www.google.com/maps/dir/''/community+beer+brewery/data=!4m5!4m4!1m0!1m2!1m1!1s0x864e9947c83d891d:0x9069448a6b74752d?sa=X&ved=0ahUKEwikvurw7sHXAhVhrFQKHVKaDs8Q9RcIkQEwCw",
         "photo": "https://images1.dallasobserver.com/imager/u/original/7028122/dsc_0039.jpg",
         "answers": ["1", "5", "3", "4", "3"]
     }

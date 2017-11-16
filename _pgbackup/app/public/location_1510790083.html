@@ -14,17 +14,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body style="background-color: #a0bbd1">
-        <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.11);padding-left: 52px"> 
-            <h1>Hoppy Hour Brew Review</h1> 
-            <h3>Reviews of Dallas Brewhouses</h3> 
-            <hr> 
-            <!--<a href="/" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-eye-open"></span> Search Reviews</a>-->             
-            <a href="/view" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Reviews</a> 
-            <a href="/add" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Review</a> 
-            <a href="/all" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Reviews</a> 
-            <a href="/high" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th-list"></span> Best Rated</a> 
-            <a href="/auth" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Home</a> 
+        <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.14)"> 
+            <h1 style="color: #fbf7f7">Hoppy Hour</h1>              
+
+            <p></p> 
         </div>
         <div id="map" style="margin-left: 10%"></div>
         <script>
@@ -36,7 +29,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 32.776664, lng: -96.796988},
-          zoom: 12
+          zoom: 10
         });
         infoWindow = new google.maps.InfoWindow;
         var communityBeer ={lat: 32.791431  ,lng: -96.816057 };

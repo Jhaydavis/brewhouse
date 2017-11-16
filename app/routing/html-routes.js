@@ -19,7 +19,7 @@ module.exports = function (app) {
     });
 
     app.get('/locator', function (req, res) {
-        res.sendFile(path.join(__dirname + '/../public/locator.html'));
+        res.sendFile(path.join(__dirname + '/../public/location.html'));
     });
 
 
