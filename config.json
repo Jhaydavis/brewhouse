@@ -1,0 +1,12 @@
+{
+    
+    "production": {
+      "username": "mx9ux3m5rd6yqghx",
+      "password": "d4tfypnbllbbxqeh",
+      "database": "g3bn98jcwaj4hoyp",
+      "host": "etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "use_env_variable": "
+      mysql://mx9ux3m5rd6yqghx:d4tfypnbllbbxqeh@etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/g3bn98jcwaj4hoyp"
+    }
+  }
