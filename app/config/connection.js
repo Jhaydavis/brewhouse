@@ -5,7 +5,7 @@ var connection;
 
 //  JAWSDB - heroku
 if (process.env.JAWSDB_URL) {
-	connection = Sequelize.createConnection(process.env.JAWSDB_URL);
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 	connection = new Sequelize("hoppy_reviews", "root", "", {
 		host: "localhost",
