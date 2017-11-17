@@ -1,12 +1,20 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+// *********************************************************************************
+// CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
+// *********************************************************************************
 
-connection.connect();
+// Dependencies
+var Sequelize = require("sequelize");
 
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
+// Creates mySQL connection using Sequelize
+var sequelize = new Sequelize("hoppy_reviews", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
 });
 
-connection.end();
+// Exports the connection for other files to use
+module.exports = sequelize;
