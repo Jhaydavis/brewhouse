@@ -77,55 +77,38 @@ $(document).ready(function () {
                     //$('#userName').val('');
                    // $('#imageLink').val('');
 
-                    data.forEach(function (profile) {
+                    data.forEach(function (profile){
                         var profileDiv = $('<div class="profile">');
                         var name = profile.name;
                         var location = profile.location;
                         var photoURL = profile.photo;
                         var map = profile.map;
                         // Put the name in a header.
-                        var nameHeader = $('<h3>').text(name);
+                        var nameHeader = $('<h4>').text(name);
                         var brewLink = $('<h4>').html()
-                        // Add a photo with an 'src' of the photoURL submitted.
-                        //var myPhoto = $('<img>').attr('src', imageLink);
+                    
                         var photo = $('<img>').attr('src', photoURL);
-
-                        //var mapDirections = $("#modalMap").html("<a href=" + map + "</a>");
+//var mapDirections = $("#modalContent").html("<a href=" + map + ">  Get  Directions</a>");
+                        var mapDirections = $("<h5>").html("<a href=" + map + " target='_blank'" + ">Get Directions</a>", function(e)
+                        { 
+                            window.open(this.href);
+                            e.preventDefault();
+                        });
                         
-                        
-                        //profileDiv.append(myPhoto, nameHeader,  photo);
-                       $("#modalContent").append(nameHeader, photo, mapDirections);
-                       var mapDirections = $("#modalMap").html("<a href=" + map + ">  Get Directions</a>");
-
-
-                        // ******  Begin Google Map API   ******
-                            
-                        
-                          
-
-
-                        //******     End Google Map  API  ******
-
-
-
-
-
+                        profileDiv.append(nameHeader, photo, "<br>" , location, mapDirections, "<hr>");
+                   
                         // Add these items to the modal.
                         $('#modalContent').append(profileDiv);
-                        //$('#modalContent').append(profileDiv);
-                        $('#modalContent').append(location);
-
-                        // See if I can append the
-                       
+               
                     });
 
 
                     if (data.length > 1) {
                         // header is plural.
-                        $('.modal-title').text(userName + ', your best brewery matches would be:');
+                        $('.modal-title').html("<h3>" + userName + ',  your best brewery matches would be:');
                     } else {
                         // header is singular.
-                        $('.modal-title').text(userName + ', your best brewery match is:');
+                        $('.modal-title').html("<h3>" + userName + ',  your best brewery match is:');
                        
                     }
 
@@ -137,7 +120,7 @@ $(document).ready(function () {
             $('#errorModal').modal();
             setTimeout(function () {
                 $('#errorModal').modal('hide');
-            }, 4000);
+            }, 4500);
         }
     });
 });
